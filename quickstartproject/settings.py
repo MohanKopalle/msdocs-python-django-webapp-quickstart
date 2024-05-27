@@ -15,8 +15,8 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-WEBSITE_HOSTNAME = 'https://python-django-webapp-quickstart.azurewebsites.net/'
-CUSTOM_HOSTNAME = 'https://mohankopalle.in'
+WEBSITE_HOSTNAME = 'www.python-django-webapp-quickstart.azurewebsites.net/'
+CUSTOM_HOSTNAME = 'www.mohankopalle.in'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -27,7 +27,8 @@ SECRET_KEY = secrets.token_hex();
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [WEBSITE_HOSTNAME,CUSTOM_HOSTNAME,]
+#ALLOWED_HOSTS = [WEBSITE_HOSTNAME,CUSTOM_HOSTNAME,]
+ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
 
 
 # Application definition
