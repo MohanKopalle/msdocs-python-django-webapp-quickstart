@@ -27,7 +27,7 @@ SECRET_KEY = secrets.token_hex();
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME'],os.environ['CUSTOM_HOSTNAME'],]
+ALLOWED_HOSTS = [WEBSITE_HOSTNAME,CUSTOM_HOSTNAME,]
 
 
 # Application definition
