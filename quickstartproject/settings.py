@@ -27,7 +27,7 @@ SECRET_KEY = secrets.token_hex();
 DEBUG = True
 
 ALLOWED_HOSTS = ['mohankopalle.in','python-django-webapp-quickstart.azurewebsites.net']
-#ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
+###ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
 
 
 # Application definition
